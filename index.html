@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECOD3X TOOLS</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <a href="./index.html"><img src="./assets/decode.png" alt="decodelogo"/></a>
+    <div class="container">
+        <textarea id="text-input" placeholder="digite o texto para criptografar/descriptografar"></textarea>
+        <button id="encrypt-button" class="btn">Criptografar</button>
+        <button id="decrypt-button" class="btn">Descriptografar</button>
+        <div id="result" class="result">
+            <div class="output">
+                <div class="output-header">Texto Criptografado:</div>
+                <div id="encrypted-text" class="output-text"></div>
+                <button id="copy-encrypted" class="btn copy-btn">Copiar</button>
+            </div>
+            <div class="output">
+                <div class="output-header">Texto Descriptografado:</div>
+                <div id="decrypted-text" class="output-text"></div>
+                <button id="copy-decrypted" class="btn copy-btn">Copiar </button>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <p>Coloque a senha:</p>
+            <input type="password" id="secret-key" class="input-field">
+            <button id="submit-key" class="btn">Confirmar</button>
+        </div>
+    </div>
+    <script src="./assets/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</body>
+</html>
